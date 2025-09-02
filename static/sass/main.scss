@@ -1,0 +1,176 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../../font/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: Comic;
+  src: url(../../font/ComicNeue-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+  box-sizing: border-box;
+  font-family: Comic;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #fff);
+  border-radius: 6px;
+}
+
+body {
+  background-image: url(../../img/—Pngtree—anime\ wallpaper\ with\ beautiful\ girl_2772296.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #eef1ff;
+  [class="container"] {
+    background: rgba(0, 0, 0, .8);
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transform: translate(-50%,-50%);
+    box-shadow: 10px 10px 0 rgba(222, 222, 222, .8);
+    header {
+      text-align: center;
+      margin-bottom: 16px;
+      h1 {
+        margin: 0;
+        font-size: 28px;
+      }
+      [class="sub"] {
+        margin: 6px 0 0;
+        opacity: .8;
+      }
+    }
+    [class="flex"] {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      /* border: 1px solid #fff; */
+      [class="karakter"] {
+        width: 200px;
+        height: 100%;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        margin-right: 10px;
+        background: #ccc;
+        img {
+          width: 100%;
+        }
+      }
+      [id="chat"] { 
+        /* background: #0f1733; */
+        padding: 10px;
+        [class="messages"] {
+          /* background: #0f1733; */
+          border: 1px solid #1d2a5a;
+          border-radius: 12px;
+          padding: 12px;
+          height: 400px;
+          width: 350px;
+          overflow-x: scroll;
+          flex-direction: column;
+          border: 2px solid #0f1733;
+        }
+      }
+    }
+  }
+}
+
+
+
+[class="donasi"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 15px;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    img {
+      width: 150px;
+      border-radius: 10px;
+    }
+  }
+}
+
+
+
+
+
+.msg {
+  display: flex;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin: 8px 0;
+  max-width: 90%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.msg.user {
+  background: #153b72;
+  margin-left: auto;
+  border-radius: 10px;
+  padding: 5px 10px;
+
+}
+.msg.ai {
+  background: #1b254b;
+  margin-right: auto;
+  /* background: #f0f0f0; */
+  border-radius: 10px;
+  padding: 5px 10px;
+
+}
+.msg small { opacity:.75; }
+
+.ai-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#chat-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+#msg-input { flex:1; padding:12px 14px; border-radius: 10px; border:1px solid #1d2a5a; background:#0f1733; color:#eef1ff; }
+button { padding: 12px 16px; border-radius: 10px; border:1px solid #1d2a5a; background:#1b254b; color:#eef1ff; cursor:pointer; }
+button:hover { filter:brightness(1.1); }
+button.ghost { background: transparent; }
+footer { text-align:center; margin-top: 14px; opacity:.7; }
+
+@media screen and (max-width: 576px) {
+  [class="flex"] {
+    flex-direction: column;
+  }
+}
